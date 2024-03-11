@@ -36,17 +36,18 @@ int findMaxSum(int arr[], int n) {
 int main ()
 {
   int n;
-  printf("Enter size of an array\n");
+  printf("Enter size of an array\n\n");
   scanf("%d", &n);
 	int* array = (int*) malloc(n * sizeof(int));
 
   srand(0);
   for (int i = 0; i < n; i++) {
     array[i] = rand() % 100;
+    printf("%d ", array[i]);
   }
 
   int maxSum = findMaxSum(array, n);
-  printf("\n%d", maxSum);
+  printf("\n%d\n", maxSum);
   
   free(array);
   return 0;
