@@ -3,6 +3,10 @@
 
 void main (void)
 {
-	printf ("Hello World\n");
-	printf ("Goodbye World\n");
+  int n;
+  printf("Enter size of an array");
+  scanf("%d", &n);
+	int* array = (int*) malloc(n * sizeof(int));
+
+  free(array);
 }
