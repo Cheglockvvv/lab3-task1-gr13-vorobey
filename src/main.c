@@ -1,4 +1,7 @@
 /* main.c */
+/*Student: Vorobey Artyom Vladimirovich
+This program finds numbers that have max sum of their digits*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
