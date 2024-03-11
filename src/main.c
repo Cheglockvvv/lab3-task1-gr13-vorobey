@@ -1,5 +1,6 @@
 /* main.c */
 #include <stdio.h>
+#include <stdlib.h>
 
 int findMaxSum(int arr[], int n) {
   int maxSum = 0;
