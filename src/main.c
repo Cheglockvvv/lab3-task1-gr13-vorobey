@@ -1,6 +1,16 @@
 /* main.c */
 #include <stdio.h>
 
+int findMaxSum(int arr[], int n) {
+  int maxSum = 0;
+  int amountOfNumbers = 1;
+  int* maxNumbers = (int*) malloc(amountOfNumbers * sizeof(n));
+
+  
+
+  return maxSum;
+}
+
 void main (void)
 {
   int n;
