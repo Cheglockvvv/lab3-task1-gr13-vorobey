@@ -13,6 +13,7 @@ int findMaxSum(int arr[], int n) {
     
     while (check > 0) {
       currentSum += check % 10;
+      check /= 10;
     }
 
     digitSum[i] = currentSum;
@@ -32,10 +33,10 @@ int findMaxSum(int arr[], int n) {
   return maxSum;
 }
 
-int main (void)
+int main ()
 {
   int n;
-  printf("Enter size of an array");
+  printf("Enter size of an array\n");
   scanf("%d", &n);
 	int* array = (int*) malloc(n * sizeof(int));
 
@@ -44,7 +45,8 @@ int main (void)
     array[i] = rand() % 100;
   }
 
-  printf("\n%d", findMaxSum(array, n));
+  int maxSum = findMaxSum(array, n);
+  printf("\n%d", maxSum);
   
   free(array);
   return 0;
