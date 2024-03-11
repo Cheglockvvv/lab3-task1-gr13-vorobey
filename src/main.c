@@ -37,7 +37,7 @@ int findMaxSum(int arr[], int n) {
 int main ()
 {
   int n;
-  printf("Enter size of an array\n\n");
+  printf("Enter size of an array\n");
   scanf("%d", &n);
 	int* array = (int*) malloc(n * sizeof(int));
 
@@ -47,8 +47,10 @@ int main ()
     printf("%d ", array[i]);
   }
 
+  printf("Numbers with max sum of digits\n");
+
   int maxSum = findMaxSum(array, n);
-  printf("\n%d\n", maxSum);
+  printf("\nThe sum is: %d\n", maxSum);
   
   free(array);
   return 0;
