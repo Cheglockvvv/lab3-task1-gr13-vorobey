@@ -26,7 +26,8 @@ int findMaxSum(int arr[], int n) {
       printf("%d ", arr[i]);
     }
   }
-  
+
+  free(digitSum);
   return maxSum;
 }
 
@@ -42,7 +43,7 @@ int main (void)
     array[i] = rand() % 100;
   }
 
-  
+  printf("\n%d", findMaxSum(array, n));
   
   free(array);
   return 0;
