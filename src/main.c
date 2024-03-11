@@ -6,7 +6,18 @@ int findMaxSum(int arr[], int n) {
   int amountOfNumbers = 1;
   int* maxNumbers = (int*) malloc(amountOfNumbers * sizeof(n));
   
+  for (int i = 0; i < n; i++) {
+    int check = arr[i];
+    int currentSum = 0;
+    
+    while (check > 0) {
+      currentSum += check % 10;
+    }
 
+    if (currentSum > maxSum) {
+      maxSum = currentSum;
+    }
+  }
   
   return maxSum;
 }
@@ -23,7 +34,8 @@ int main (void)
     array[i] = rand() % 100;
   }
 
+  
+  
   free(array);
-
   return 0;
 }
