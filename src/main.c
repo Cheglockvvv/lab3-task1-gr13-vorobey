@@ -8,5 +8,7 @@ void main (void)
   scanf("%d", &n);
 	int* array = (int*) malloc(n * sizeof(int));
 
+  srand(0);
+
   free(array);
 }
