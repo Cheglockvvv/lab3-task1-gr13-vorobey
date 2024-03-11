@@ -4,8 +4,8 @@
 int findMaxSum(int arr[], int n) {
   int maxSum = 0;
   int amountOfNumbers = 1;
-  int* maxNumbers = (int*) malloc(amountOfNumbers * sizeof(n));
-  
+  int* digitSum = (int*) malloc(n * sizeof(n));
+
   for (int i = 0; i < n; i++) {
     int check = arr[i];
     int currentSum = 0;
@@ -14,8 +14,16 @@ int findMaxSum(int arr[], int n) {
       currentSum += check % 10;
     }
 
+    digitSum[i] = currentSum;
+
     if (currentSum > maxSum) {
       maxSum = currentSum;
+    }
+  }
+
+  for (int i = 0; i < n; i++) {
+    if (digitSum[i] == maxSum) {
+      printf("%d ", arr[i]);
     }
   }
   
