@@ -1,6 +1,7 @@
 /* main.c */
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int findMaxSum(int arr[], int n) {
   int maxSum = 0;
@@ -40,7 +41,7 @@ int main ()
   scanf("%d", &n);
 	int* array = (int*) malloc(n * sizeof(int));
 
-  srand(0);
+  srand(time(0));
   for (int i = 0; i < n; i++) {
     array[i] = rand() % 100;
     printf("%d ", array[i]);
